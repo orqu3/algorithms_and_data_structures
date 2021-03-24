@@ -7,16 +7,28 @@ public class Main {
     public static void main(String[] args) {
 
         //1. Создать массив большого размера (100000 элементов).
-        int[] array = new int[100000];
+        int[] firstArray = new int[100000];
+        int[] secondArray = new int[100000];
+        int[] thirdArray = new int[100000];
+
 
         //3. Заполнить массив случайными числами.
         Random random = new Random();
-        for (int i = 0; i < array.length; i++) {
-            array[i] = random.nextInt();
+        for (int i = 0; i < firstArray.length; i++) {
+            firstArray[i] = random.nextInt();
         }
-        testBubbleSortTime(array); //28645 ms
-        testSelectionSortTime(array); //1554 ms
-        testInsertionSortTime(array); //3 ms
+
+        for (int i = 0; i < secondArray.length; i++) {
+            secondArray[i] = random.nextInt();
+        }
+
+        for (int i = 0; i < thirdArray.length; i++) {
+            thirdArray[i] = random.nextInt();
+        }
+
+        testBubbleSortTime(firstArray); //28981 ms
+        testSelectionSortTime(secondArray); //5783 ms
+        testInsertionSortTime(thirdArray); //1195 ms
     }
 
     //4. Написать методы, реализующие рассмотренные виды сортировок, и проверить скорость выполнения каждой.
