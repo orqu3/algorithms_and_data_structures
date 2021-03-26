@@ -1,0 +1,33 @@
+package lesson_four;
+
+public class MyLinkedListStack<T> {
+
+    private MyLinkedList<T> ll = new MyLinkedList<>();
+
+    public void push(T item){
+        ll.insertFirst(item);
+    }
+
+    public T peek(){
+        return ll.getFirst();
+    }
+
+    public T pop(){
+        return ll.removeFirst();
+    }
+
+    public int size(){
+        return ll.size();
+    }
+
+    public boolean isEmpty(){
+        return ll.isEmpty();
+    }
+
+    @Override
+    public String toString() {
+        return ll.toString();
+    }
+
+
+}
