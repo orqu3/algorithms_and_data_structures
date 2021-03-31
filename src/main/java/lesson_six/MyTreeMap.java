@@ -34,7 +34,7 @@ public class MyTreeMap<Key extends Comparable<Key>, Value> {
     }
 
     private boolean isBalanced(Node node) {
-        if (isEmpty()) {
+        if (node == null) {
             return true;
         }
         if (Math.abs(height(node.left) - height(node.right)) > 1) {
